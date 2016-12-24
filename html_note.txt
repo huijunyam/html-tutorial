@@ -1,6 +1,19 @@
+HTML
 html element => <a>, <p>, <h1> define structure of the content
 html tag => <a></a> content of that element
 html attribute => provide additional information about an element such as id, class, href in <a> tags
+
 <!DOCTYPE html => inform web browser which version of html we are using
 The content in <head> will not be shown in the page
 The content in <body> will be shown
+
+Self closing elements => only have one tag and do not have closing tag
+example: <br>, <img>, <meta>, <wbr>, <embed>, <input>, <param>, <hr>, <link>, <source>
+
+CSS
+selectors => which elements within our html to target and apply styles to
+selector generally target an attribute value such as id and class or element
+
+property => once the element is selected, a property determine the styles will be applied to that element
+it is written inside the {} and followed by semicolon
+such as background, background-color, font-size, height, width
