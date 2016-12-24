@@ -11,9 +11,32 @@ Self closing elements => only have one tag and do not have closing tag
 example: <br>, <img>, <meta>, <wbr>, <embed>, <input>, <param>, <hr>, <link>, <source>
 
 CSS
+linking CSS, we used rel attribute with a value of stylesheet to specify their relationship between html and css
+href attr used to identify the location or path of the CSS file
+
 selectors => which elements within our html to target and apply styles to
 selector generally target an attribute value such as id and class or element
 
 property => once the element is selected, a property determine the styles will be applied to that element
 it is written inside the {} and followed by semicolon
 such as background, background-color, font-size, height, width
+
+values => determine what style we like to apply for the property
+
+type selector => target element by their element type
+such as <div>, <p>
+
+class selector => allow us to select an element based on the element's class attribute value
+defined by a leading period .awesome {}
+
+id selector => more precise than class selector, target one unique element
+It can only be used once per page.
+denoted by # followed by id attribute value
+
+CSS reset
+to ensure cross browser compatibility because google chrome will has its own set
+of default styling that is different from internet explorer or safari
+the reset generally removed any sizing, margin, padding or additional styling
+Css reset need to be placed at the top of the css file
+one of the most popular reset by Eric Meyer's reset http://meyerweb.com/eric/tools/css/reset/
+or normalize.css created by Nicolas Gallagher
