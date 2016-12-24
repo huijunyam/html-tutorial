@@ -103,3 +103,55 @@ the reset generally removed any sizing, margin, padding or additional styling
 Css reset need to be placed at the top of the css file
 one of the most popular reset by Eric Meyer's reset http://meyerweb.com/eric/tools/css/reset/
 or normalize.css created by Nicolas Gallagher
+
+display property
+block, inline, inline-block, none
+block => block level element
+inline => inline level element
+inline block => behave as a block level element, accepting all box model properties,
+but it will display in line with other elements and it will not begin on a new line by default
+none => hide an element and render the page as if that element doesn't exist
+
+box model
+every element on a page is a rectangular box and may have height, width, padding, borders, and margins
+to set the height and width of non inline element such as block and inline block, use height and width property
+
+margin sets the amount of space that surround the element
+inline element can't set the top and bottom margin
+inline block and block element accept vertical margin (top and bottom)
+
+padding falls inside the element border, used to provide spacing directly within an element.
+inline element can have vertical (top and bottom) padding
+block and inline block work like normal for margin and padding
+
+The margin and padding properties are completely transparent and do not accept any color values. Being transparent,
+though, they show the background colors of relative elements. For margins, we see the background color of the parent
+element, and for padding, we see the background color of the element the padding is applied to.
+
+border require width, style and color
+style => solid, double, dashed, dotted, none
+border-left, border-top, border-right, border-bottom 
+border-radius accepts length unit, including percentages and pixel
+
+box-sizing property => allow us to change exactly how the box model works and how
+an element's size is calculated. The property accepts three primary values such as
+content-box, padding-box, border-box
+
+content-box => is the default value, leaving the box model as an additive design
+The size of an element begins with the width and height property and then any padding, border, or margin property values are added from there
+
+padding-box alters the box model by including any padding property values within the height and width of an element.
+When using the padding-box value, if an element has a width of 400 pixels and a padding of 20 pixels around every side, the
+actual width will remain 400 pixels. As any padding values increase, the content size within an element shrinks proportionately.
+If we add a border or margin, those values will be added to the width or height properties to calculate the full box size.
+For example, if we add a border of 10 pixels and a padding of 20 pixels around every side of the element with a width of 400 pixels,
+the actual full width will become 420 pixels.
+
+border-box alters the box model so that any border or padding property values are included within the width and height of an element.
+When using the border-box value, if an element has a width of 400 pixels, a padding of 20 pixels around every side, and a border of 10 pixels
+around every side, the actual width will remain 400 pixels.
+
+Generally speaking, the best box-sizing value to use is border-box. The border-box value makes our math much, much easier.
+If we want an element to be 400 pixels wide, it is, and it will remain 400 pixels wide no matter what padding or border values we add to it.
+
+sometimes need to add vendor prefix such as mozilla firefox(-moz-), internet explorer(-ms-), webkit(google chrome and safari ==> -webkit-)
