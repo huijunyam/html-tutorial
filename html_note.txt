@@ -10,6 +10,42 @@ The content in <body> will be shown
 Self closing elements => only have one tag and do not have closing tag
 example: <br>, <img>, <meta>, <wbr>, <embed>, <input>, <param>, <hr>, <link>, <source>
 
+Semantics
+is the practice of giving content on the page meaning and structure by using the proper element
+Semantic code describe the value of content on a page, regardless of the style or appearance of that content
+
+<div> and <span> have no semantic values, they act as containers solely for styling purpose
+<div> block level element, <span> inline level element used to identify smaller grouping of text within block level element
+
+Block vs inline elements
+block element begin on new line, occupying any available width
+inline element do not begin new line, lining up one after another, and only
+maintain width of their content.
+
+Bold text with strong or b
+<strong></strong> used to give strong importance tot ext, and is thus most popular option to bold text
+<b> element means to stylistically offset the text, which is not always the best choice.
+
+Italicize text with emphasize
+to italicize text, we used <em> inline level element, the other option is <i> element
+
+Building structure in html 5
+header, nav, article, section, aside, footer
+
+header element => identify the top of a page, article, section or other segment of a page
+it is in the body tag, it outline the heading of a segment of a page.
+
+nav => identified a section of major navigational links on a page. It should be reserved for primary navigation sections only
+
+article => used to identify a section of independent, self contained content maybe independent distributed or reused. 
+
+section => used to identify a thematic grouping of content
+
+aside => hold content such as sidebars, inserts, or brief explanation, that is related to the content surrounding it
+
+footer => identifies the closing or end of a page, section, or other segment of a page
+it usually found at the bottom of its parent
+
 CSS
 linking CSS, we used rel attribute with a value of stylesheet to specify their relationship between html and css
 href attr used to identify the location or path of the CSS file
