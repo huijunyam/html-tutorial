@@ -37,7 +37,7 @@ it is in the body tag, it outline the heading of a segment of a page.
 
 nav => identified a section of major navigational links on a page. It should be reserved for primary navigation sections only
 
-article => used to identify a section of independent, self contained content maybe independent distributed or reused. 
+article => used to identify a section of independent, self contained content maybe independent distributed or reused.
 
 section => used to identify a thematic grouping of content
 
@@ -45,6 +45,33 @@ aside => hold content such as sidebars, inserts, or brief explanation, that is r
 
 footer => identifies the closing or end of a page, section, or other segment of a page
 it usually found at the bottom of its parent
+
+list of character encoding can be found in http://www.copypastecharacter.com/
+
+Links
+relative path => link pointing to other page of the same website which does not include the domain (.com, .org, .edu)
+the link pointing to another page on the same website, the href attribute value needs to include only the filename of the page
+
+absolute path => link to other website outside of the current one, where the href must include full domain
+
+email link => href need to start with mailto:followed by email address
+ex: href="mailto:shay@awesome.com"
+additionally, subject, body, and other information can be populated for the email
+to add subject line, we will include subject= parameter after the email address
+to add body line, we will include body= parameter
+binding one parameter with another, need to separate with &
+after the email address, need to add ? to bind the hyperlink path, spacing need to be encoded with %20
+ex: <a href="mailto:shay@awesome.com?subject=Reaching%20Out&body=How%20are%20you">Email Me</a>
+
+open link in new window
+used target attr with a value of _blank
+target attr determine exactly where the link to be display, and the _blank value specifies a new window
+<a href="http://shayhowe.com/" target="_blank">Shay Howe</a>
+
+linking to parts of the same page
+we can create an on page link by first setting an id attribute on the element where we wish to link to
+then use the id in the href
+ex: <a href="#top">Back to top</a>
 
 CSS
 linking CSS, we used rel attribute with a value of stylesheet to specify their relationship between html and css
