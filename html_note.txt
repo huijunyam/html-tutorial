@@ -1,0 +1,6 @@
+html element => <a>, <p>, <h1> define structure of the content
+html tag => <a></a> content of that element
+html attribute => provide additional information about an element such as id, class, href in <a> tags
+<!DOCTYPE html => inform web browser which version of html we are using
+The content in <head> will not be shown in the page
+The content in <body> will be shown
