@@ -207,8 +207,42 @@ useful for placing elements next to one another within a line
 display elements within a line while allowing them to accept all box model properties, including height, width, padding, border, and margin.
 Using inline-block elements allows us to take full advantage of the box model without having to worry about clearing any floats.
 However, inline block elements have default white spacing in between the blocks. There are a number of ways to remove the space between
-inline-block elements, and some are more complex than others. 
+inline-block elements, and some are more complex than others.
 
 The first solution is to put each new <section> element’s opening tag on the same line as the previous <section> element’s closing tag.
 Rather than using a new line for each element, we’ll end and begin elements on the same line. Writing inline-block elements this way ensures
 that the space between inline-block elements within HTML doesn’t exist; consequently, the space will not appear when the page is rendered.
+
+Create reusable layout
+using col-1-2...
+My approach is to use inline-block elements to create the grid—or layout—of a page and to then use floats when I want content to wrap around a given element
+.col-1-3 {
+  width: 33.33%;
+}
+.col-2-3 {
+  width: 66.66%;
+}
+
+positioning element
+position property has values of static, relative, absolute
+then we can use top, bottom, left, and right property
+position by moving the elements around
+
+relative => allows elements to appear within the normal flow a page, leaving space for an element as intended while not allowing other elements
+to flow around it; however, it also allows an element’s display position to be modified with the box offset properties.
+
+absolute => will not appear within the normal flow of a document, and the original space and position of the absolutely positioned element will not be preserved.
+absolutely positioned elements are moved in relation to their closest relatively positioned parent element. Should a relatively positioned
+parent element not exist, the absolutely positioned element will be positioned in relation to the <body> element.
+
+Working with typography
+typeface => is what we see. It is the artistic impression of how text looks, feels, and reads.
+font => file that contains a typeface. Using a font on a computer allows the computer to access the typeface.
+
+setting a font color
+color: yellow;
+
+font-style property has values of normal, italic, oblique, inherit
+font-variant property has values of normal, small-caps, inherit
+font-weight property has values of normal, bold, bolder, lighter, inherit, numeric value(100-900)
+line-height property has values in px ==>used to define the spacing between two lines
