@@ -395,4 +395,32 @@ To prevent the list item marker from being displayed on top of other <li> elemen
 Adding media
 adding image => <img src="dog.jpg" alt="A black, brown, and white dog wearing a kerchief">
 size image => we can use height and weight property in css
-<img> by default is an inline element  
+<img> by default is an inline element
+
+Adding audio
+<audio src="jazz.ogg"></audio>
+audio has attribute such as autoplay, controls, loop, preload
+the autoplay, controls, and loop attributes are all boolean attributes.
+autoplay => the audio file will automatically play upon loading
+<audio src="jazz.ogg" autoplay></audio>
+controls => it will display a browser default audio controls including play, pause, seek, volume controls
+<audio src="jazz.ogg" controls></audio>
+loop => will cause an audio file to repeat continually from beginning to end
+preload attr has three values such as none, auto, metadata ==> help identify what if any information about the audio file should be loaded before clip is played
+The none value won’t preload any information about an audio file, while the auto value will preload all information about an audio file.
+The metadata value sits in between the none and auto values, as it will preload any available metadata information about an audio file, such as the clip’s length, but not all information.
+using the preload attribute with a value of metadata or none is a good idea when an audio file is not essential to a page. It’ll help to conserve bandwidth and allow pages to load faster.
+
+adding video
+similar to audio has attributes such as src, autoplay, controls, loop, poster and preload
+<video src="earth.ogv" controls></video>
+poster => allows us to specify an image, in the form of a URL to be shown before a video is played.
+<video src="earth.ogv" controls poster="earth-video-screenshot.jpg"></video>
+
+adding inline frames
+inline frame allows us to add content to a page by embedding another html page within the current page using iframe to external website such as google map, youtube, and others
+The <iframe> element accepts the URL of another HTML page within the src attribute value; this causes the content from the embedded HTML page to be displayed on the current page.
+The value of the src attribute may be a URL relative to the page the <iframe> element appears on or an absolute URL for an entirely external page.
+<iframe src="https://www.google.com/maps/embed?..."></iframe>
+The <iframe> element has a few default styles, including an inset border and a width and height. These styles can be adjusted using the frameborder, width,
+and height HTML attributes or by using the border, width, and height CSS properties.
