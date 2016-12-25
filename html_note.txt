@@ -454,3 +454,52 @@ placeholder => provides a hint or tip within the form control of an <input> or <
 </label>
 required => enforces that an element or form control must contain a value upon being submitted to the server.
 and many more attributes
+
+Table
+Additional elements helped to organize table such as caption, thead, tbody, tfoot
+caption => provide a caption or title for a table. A caption will help users identify
+what the table pertains to and what data they can expect to find within it. The <caption>
+element must come immediately after the opening <table> tag, and it is positioned at the top of a table by default.
+The content within tables can be broken up into multiple groups,
+including a head, a body, and a foot. The <thead> (table head), <tbody> (table body), and <tfoot> (table foot)
+elements help to structurally organize tables.
+<table>
+  <caption>Design and Front-End Development Books</caption>
+  <thead>
+    <tr>
+      <th scope="col">Item</th>
+      <th scope="col">Availability</th>
+      <th scope="col">Qty</th>
+      <th scope="col">Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Don&#8217;t Make Me Think by Steve Krug</td>
+      <td>In Stock</td>
+      <td>1</td>
+      <td>$30.02</td>
+    </tr>
+    ...
+  </tbody>
+  <tfoot>
+    <tr>
+      <td>Subtotal</td>
+      <td></td>
+      <td></td>
+      <td>$135.36</td>
+    </tr>
+    <tr>
+      <td>Tax</td>
+      <td></td>
+      <td></td>
+      <td>$13.54</td>
+    </tr>
+    <tr>
+      <td>Total</td>
+      <td></td>
+      <td></td>
+      <td>$148.90</td>
+    </tr>
+  </tfoot>
+</table>
