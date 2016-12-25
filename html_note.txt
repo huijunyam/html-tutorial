@@ -330,3 +330,64 @@ div {
   background: #648880;
   background: linear-gradient(to right, #f6f1d3, #648880, #293f50);
 }
+
+multiple background images
+The background image value that comes first will be the foremost background image, and the background image that’s listed last will be the rearmost background image.
+Any value between the first and the last will reside within the middle ground accordingly.
+div {
+  background:  url("foreground.png") 0 0 no-repeat, url("middle-ground.png") 0 0 no-repeat, url("background.png") 0 0 no-repeat;
+}
+
+New CSS properties: background-size, background-clip, background-origin
+The background-size property allows us to change the size of a background image, while the background-clip and background-origin properties allow us to control
+where a background image is cropped and where a background image is contained within the element (inside the border or inside the padding, for example).
+
+background-size accepts values
+The first value will set the width of the background image, while the second value will set the height of the background image.
+It’s important to note that percentage values are in relation to the element’s size, not the background image’s original size.
+In addition to length background-size property values, there are also cover and contain keyword values available to the background-size property.
+The cover keyword value specifies that the background image will be resized to completely cover an element’s width and height. The background image’s original
+aspect ratio will be preserved, yet the image will stretch or shrink as necessary to cover the entire element.
+The contain keyword value, on the other hand, specifies that the background image will be resized to reside entirely contained within an element’s width and height.
+In doing so the background image’s original aspect ratio will be preserved, but the image will stretch or shrink as necessary to remain within the width and height of the element.
+In contrast with the cover keyword value, the contain keyword value will always show the full background image; however, oftentimes it will not occupy the full available space of the element.
+
+background-clip has values of border-box, padding-box, content-box
+
+Creating Lists
+unordered list, ordered list, description list
+ordered list <ol> has attribute start which allow us to choose the start number ==> <ol start="30">
+and it has a reversed attribute which allowed a list to appear in reversed order ===> <ol reversed>
+<li> has value attribute within an ordered list. The number of any list item appearing below a list item with a value attrbiute
+will be recalculated accordingly, <li value="10"></li> ==> the next li will have 11 as the number
+list-style-type property used to add marker to the list
+list-style-type: none, disc, circle, square, decimal, decimal-leading-zero, lower-roman, upper-roman, lower-greek, lower-alpha,
+upper-alpha, armenian, georgian
+list-style-position: outside, inside, inherit
+shorthand form ==> list-style: circle inside
+The outside property value places the list item marker to the left of the <li> element and doesn’t allow any content to wrap below the list item marker.
+The inside property value (which is rarely seen or used) places the list item marker in line with the first line of the <li> element and allows other content to wrap below it as needed.
+
+description list <dl>
+description term element <dt> and description element <dd>
+<dl>
+  <dt>study</dt>
+  <dd>The devotion of time and attention to acquiring knowledge on an academic subject, especially by means of books</dd>
+  <dt>design</dt>
+  <dd>A plan or drawing produced to show the look and function or workings of a building, garment, or other object before it is built or made</dd>
+  <dd>Purpose, planning, or intention that exists or is thought to exist behind an action, fact, or material object</dd>
+  <dt>business</dt>
+  <dt>work</dt>
+  <dd>A person's regular occupation, profession, or trade</dd>
+</dl>
+
+Displaying list horizontally
+The quickest way to display a list on a single line is to give the <li> elements a display property value of inline or inline-block. Doing so places all the <li> elements
+within a single line, with a single space between each list item, but the list-style will be disappear
+More often than not, we’ll use the inline-block property value rather than the inline property value. The inline-block property value allows us to easily add vertical
+margins and other spacing to the <li> elements, whereas the inline property value does not.
+Changing the display property value to inline or inline-block is quick; however, it removes the list item marker. If the list item marker is needed,
+floating each <li> element is a better option than changing the display property.
+Setting all <li> elements’ float property to left will horizontally align all <li> elements directly next to each other without any space between them.
+When we float each <li> element, the list item marker is displayed by default and will actually sit on top of the <li> element next to it.
+To prevent the list item marker from being displayed on top of other <li> elements, a horizontal margin or padding should be added.
