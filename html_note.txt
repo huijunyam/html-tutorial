@@ -301,3 +301,32 @@ It takes in values of repeat, repeat-x, repeat-y, no-repeat
 
 background-position allows us to adjust the position of the image relative to the top left hand corner
 It required two values: a horizontal offset(the first val) and a vertical offset(the second val)
+
+Gradient background
+Within CSS, gradient background are treated as background images
+Gradient background values were one of the values that required the use of vendor prefixes.
+Fortunately, most browsers have since eliminated the need for a vendor prefix in order to render a gradient background;
+however, it is still worth outlining vendor prefixes to ensure the best support.
+
+Linear gradients are identified by using the linear-gradient() function within the background or background-image property.
+The linear-gradient() function must include two color values, the first of which will be the beginning color value and the
+second of which will be the ending color value. The browser will then handle the transition between the two colors.
+By default, linear gradient backgrounds move from the top to the bottom of an element, transitioning smoothly between the first color value and the second
+For example, should we want a gradient to move from the left of an element to the right, we can use the keyword value to
+right to identify the direction in which the linear gradient should progress. Keyword values may also be combined. If we want the gradient to move from the
+left top to the right bottom of an element, we can use the keyword value of to right bottom.
+div {
+  background: #466368;
+  background: linear-gradient(to right bottom, #648880, #293f50);
+}
+Besides keywords, degree values are also acceptable. If we want our gradient to move to the left top of an element, we can use the degree value of 315deg,
+or if we want our gradient to move to the right bottom of an element, we can use the degree value of 135deg.
+
+Radial gradient background
+Radial gradients work from the inside to the outside of an element. Thus, the first color identified within the radial-gradient() function will sit in the
+absolute center of the element, and the second color will sit on the outside of an element. The browser will then create the transition between the two colors.
+At a minimum, gradient backgrounds will transition from one color to another; however, we may add multiple colors to a gradient and have the browser transition between all of them.
+div {
+  background: #648880;
+  background: linear-gradient(to right, #f6f1d3, #648880, #293f50);
+}
