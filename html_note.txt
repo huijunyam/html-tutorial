@@ -130,7 +130,7 @@ element, and for padding, we see the background color of the element the padding
 
 border require width, style and color
 style => solid, double, dashed, dotted, none
-border-left, border-top, border-right, border-bottom 
+border-left, border-top, border-right, border-bottom
 border-radius accepts length unit, including percentages and pixel
 
 box-sizing property => allow us to change exactly how the box model works and how
@@ -155,3 +155,49 @@ Generally speaking, the best box-sizing value to use is border-box. The border-b
 If we want an element to be 400 pixels wide, it is, and it will remain 400 pixels wide no matter what padding or border values we add to it.
 
 sometimes need to add vendor prefix such as mozilla firefox(-moz-), internet explorer(-ms-), webkit(google chrome and safari ==> -webkit-)
+
+Positioning content
+position with float property accept left or right value
+allow us to take an element, remove it from the normal flow of a page, and position it to the left or right of its parent element
+All other elements on the page will then flow around the floated element.
+When the float property is used on multiple elements at the same time, it provides the ability to create a layout by floating elements
+directly next to or opposite each other, as seen in multiple-column layouts.
+
+For reference, when an element is floated, it will float all the way to the edge of its parent element. If there isn’t a parent element,
+the floated element will then float all the way to the edge of the page.
+if want to make multi column, we can float the block left and the other block right
+
+When we float an element, we take it out of the normal flow of the HTML document. This causes the width of that element to
+default to the width of the content within it. It can be corrected by adding a fixed width property value to each column.
+Additionally, to prevent floated elements from touching one another, causing the content of one to sit directly next to the content of
+the other, we can use the margin property to create space between elements.
+
+If the elements that we want to float did not have a display value of block, it will change the display property to block when we float the element
+an element with a display value of inline, such as the <span> inline-level element, ignores any height or width property values. However,
+should that inline-level element be floated, its display value will be changed to block, and it may then accept height or width property values.
+
+if only float two column, we can use float:left and float:right for each of the elements
+but if we want to have three or more column, we need to float all of them to left, and adjust the width of each of the elements
+
+the proper styles will not render on an element that it is sitting next to or is a parent element of a floated element. When an element is floated,
+it is taken out of the normal flow of the page, and, as a result, the styles of elements around that floated element can be negatively impacted.
+Often margin and padding property values aren’t interpreted correctly, causing them to blend into the floated element; other properties can be affected, too.
+Another pitfall is that sometimes unwanted content begins to wrap around a floated element. Removing an element from the flow of the document allows
+all the elements around the floated element to wrap and consume any available space around the floated element, which is often undesired.
+
+To prevent content from wrapping around floated elements, we need to clear, or contain, those floats and return the page to its normal flow.
+
+clearing float
+clear property has value of left, right, both
+The left value will clear left floats, while the right value will clear right floats. The both value, however, will clear both left and right floats
+and is often the most ideal value.
+
+if we use the clear property with the value of both on the <footer> element, we are able to clear the floats. It is important that this clear be
+applied to an element appearing after the floated elements, not before, to return the page to its normal flow.
+
+containing float
+Rather than clearing floats, another option is to contain the floats. The outcomes of containing floats versus those of clearing them are nearly
+the same; however, containing floats does help to ensure that all of our styles will be rendered properly.
+To contain floats, the floated elements must reside within a parent element. The parent element will act as a container, leaving
+the flow of the document completely normal outside of it.
+parent container : .cf { content : ""; clear: both; display: block}
