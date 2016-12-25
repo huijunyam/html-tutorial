@@ -424,3 +424,33 @@ The value of the src attribute may be a URL relative to the page the <iframe> el
 <iframe src="https://www.google.com/maps/embed?..."></iframe>
 The <iframe> element has a few default styles, including an inset border and a width and height. These styles can be adjusted using the frameborder, width,
 and height HTML attributes or by using the border, width, and height CSS properties.
+
+Building forms
+input type has various of attributes such as text, password, color, email, range, time, date, month, search, url, datetime, number, tel, week
+select that has attribute multiple will allow user to select multiple items in the drop down
+label has an attribute for and will ties the things up with the id in input if for and id have the same name
+
+Fieldsets group form controls and labels into organized sections. Much like a <section> or other structural element, the <fieldset> is a block-level element that wraps related
+elements, specifically within a <form> element, for better organization.
+A legend provides a caption, or heading, for the <fieldset> element. The <legend> element wraps text describing the form controls that fall within the fieldset.
+<fieldset>
+  <legend>Login</legend>
+  <label>
+    Username
+    <input type="text" name="username">
+  </label>
+  <label>
+    Password
+    <input type="text" name="password">
+  </label>
+</fieldset>
+
+input attributes
+disabled =>  turns off an element or control so that it is not available for interaction or input.
+placeholder => provides a hint or tip within the form control of an <input> or <textarea> element that disappears once the control is clicked in or gains focus. This is used to give users further information on how the form input should be filled in,
+<label>
+  Email Address
+  <input type="email" name="email-address" placeholder="name@domain.com">
+</label>
+required => enforces that an element or form control must contain a value upon being submitted to the server.
+and many more attributes
