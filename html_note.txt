@@ -252,7 +252,7 @@ has values of left, right, center, justify, inherit
 The text-align values left and right will align text within an element to the left or right,
 whereas the float values left and right will move the entire element.
 
-text-decoration: underline, none, overline, line-through, inherit 
+text-decoration: underline, none, overline, line-through, inherit
 text-indent: number in px ==> used to indent the first line
 positive value indent inward and negative value indent outward
 text-shadow allows us to add a shadow or multiple shadows to text. The
@@ -269,3 +269,35 @@ none will return the space between letters back to its normal size.
 
 word-spacing  accepts the same length values and keywords as the letter-spacing property.
 Instead of spacing letters apart, though, the word-spacing property applies those values between words.
+
+citation and quotation
+<cite>: Used to reference a creative work, author, or resource
+<q>: Used for short, inline quotations
+<blockquote>: Used for longer external quotations
+<p>The book <cite><a href="http://www.amazon.com/Steve-Jobs-Walter-Isaacson/dp/1451648537">Steve Jobs</a></cite> is truly inspirational.</p>
+<p>Steve Jobs once said, <q>One home run is much better than two doubles.</q></p>
+<p><a href="http://www.businessweek.com/magazine/content/06_06/b3970001.htm">Steve Jobs</a> once said, <q cite="http://www.businessweek.com/magazine/content/06_06/b3970001.htm">One home run is much better than two doubles.</q></p>
+<blockquote>
+  <p>&#8220;In most people&#8217;s vocabularies, design is a veneer. It&#8217;s interior decorating. It&#8217;s the fabric of the curtains, of the sofa. But to me, nothing could be further from the meaning of design. Design is the fundamental soul of a human-made creation that ends up expressing itself in successive outer layers of the product.&#8221;</p>
+</blockquote>
+<blockquote cite="http://money.cnn.com/magazines/fortune/fortune_archive/2000/01/24/272277/index.htm">
+  <p>&#8220;In most people&#8217;s vocabularies, design is a veneer. It&#8217;s interior decorating. It&#8217;s the fabric of the curtains, of the sofa. But to me, nothing could be further from the meaning of design. Design is the fundamental soul of a human-made creation that ends up expressing itself in successive outer layers of the product.&#8221;</p>
+  <p><cite>&#8212; Steve Jobs in <a href="http://money.cnn.com/ magazines/fortune/fortune_archive/2000/01/24/272277/index.htm"> Fortune Magazine</a></cite></p>
+</blockquote>
+
+Setting background and gradient
+background property accepts colors and images in shorthand form
+background-color property responsible for setting solid background colors
+
+We can use RGBa or HSLa value as a transparent background
+The url() function value will be the background image’s path, and the familiar rules for creating hyperlink paths apply here.
+background-image: url("alert.png");
+Adding a background image solely using a url value can provide undesirable results, as by default the background image will repeat horizontally and
+vertically from the top left of the given element to fill up the element’s background. Thankfully we can use the background-repeat and background-position
+properties to control how or even whether the image repeats.
+
+background-repeat property can be used to change the direction in which a background image is repeated
+It takes in values of repeat, repeat-x, repeat-y, no-repeat
+
+background-position allows us to adjust the position of the image relative to the top left hand corner
+It required two values: a horizontal offset(the first val) and a vertical offset(the second val)

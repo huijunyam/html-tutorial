@@ -43,8 +43,9 @@ table {
 }
 
 body {
+  background: #293f50;
   color: #888;
-  font: 300 16px/22px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 *,
@@ -129,16 +130,27 @@ p a {
 
 .btn {
   border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
   display: inline-block;
+  font-weight: 400;
+  letter-spacing: .5px;
   margin: 0;
+  text-transform: uppercase;
 }
 
 .btn-alt {
-  border: 1px solid #dfe2e5;
+  border: 1px solid #fff;
   padding: 10px 30px;
 }
 
+.btn-alt:hover {
+  background: #fff;
+  color: #648880;
+}
+
 .hero {
+  color: #fff;
   line-height: 44px;
   padding: 22px 80px 66px 80px;
   text-align: center;
@@ -150,6 +162,7 @@ p a {
 
 .hero p {
   font-size: 24px;
+  font-weight: 100;
 }
 
 .group:before,
@@ -157,9 +170,11 @@ p a {
   content: "";
   display: table;
 }
+
 .group:after {
   clear: both;
 }
+
 .group {
   clear: both;
   *zoom: 1;
@@ -169,13 +184,25 @@ p a {
   border-top: 4px solid #648880;
   float: left;
   font-size: 48px;
+  font-weight: 100;
+  letter-spacing: .5px;
   line-height: 44px;
   padding: 40px 0 22px 0;
+  text-transform: uppercase;
 }
 
 .tagline {
   margin: 66px 0 22px 0;
   text-align: right;
+}
+
+.primary-header a,
+.primary-footer a {
+  color: #fff;
+}
+.primary-header a:hover,
+.primary-footer a:hover {
+  color: #648880;
 }
 
 .primary-footer {
@@ -212,4 +239,10 @@ p a {
 
 .teaser a:hover h3 {
   color: #a9b2b9;
+}
+
+.row {
+  background: #fff;
+  min-width: 960px;
+  padding: 66px 0 44px 0;
 }
