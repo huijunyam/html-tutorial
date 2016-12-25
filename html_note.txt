@@ -391,3 +391,8 @@ floating each <li> element is a better option than changing the display property
 Setting all <li> elements’ float property to left will horizontally align all <li> elements directly next to each other without any space between them.
 When we float each <li> element, the list item marker is displayed by default and will actually sit on top of the <li> element next to it.
 To prevent the list item marker from being displayed on top of other <li> elements, a horizontal margin or padding should be added.
+
+Adding media
+adding image => <img src="dog.jpg" alt="A black, brown, and white dog wearing a kerchief">
+size image => we can use height and weight property in css
+<img> by default is an inline element  
